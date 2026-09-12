@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balai Haraya — Bookings</title>
+<style>
+  html, body { margin:0; padding:0; height:100%; overflow:hidden; }
+  iframe { border:none; width:100%; height:100vh; display:block; }
+</style>
+</head>
+<body>
+  <iframe id="app" allow="clipboard-write"></iframe>
+  <script>
+    // Forwards whatever comes after your domain (e.g. ?page=arrival&ref=FS-XXXX) straight
+    // through to the Apps Script app, so personalized guest links keep working correctly
+    // even when visited via www.ericofarm.com instead of the raw script.google.com URL.
+    var APP_URL = 'https://script.google.com/macros/s/AKfycbzt5eCdAhtMbRSBSuPIF8wwuUuckcrQc_FUfJdf5gWh_g8Om5r6a3YBTExwsFbu4XHoIA/exec';
+    document.getElementById('app').src = APP_URL + window.location.search;
+  </script>
+</body>
+</html>
